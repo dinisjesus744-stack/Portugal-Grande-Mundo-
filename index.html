@@ -3,186 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS BOTS | Soluções Profissionais de Automação</title>
+    <title>NEXUS BOTS | Especialistas em Discord & Web</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
         body {
-            background-color: #020205;
-            color: #e2e8f0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050505;
+            color: white;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
-
-        /* Fundo Profissional com Gradiente Suave */
-        .bg-gradient-hero {
-            background: radial-gradient(circle at 50% 0%, #161e3d 0%, #020205 70%);
-            min-height: 100vh;
-        }
-
-        .neon-text { 
-            text-shadow: 0 0 15px rgba(139, 92, 246, 0.4); 
-        }
-
-        /* Glassmorphism Refinado para Melhor Leitura */
+        .neon-text { text-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6; }
         .glass {
-            background: rgba(15, 15, 25, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .glass:hover {
-            border: 1px solid rgba(139, 92, 246, 0.5);
-            transform: translateY(-8px);
-            background: rgba(20, 20, 35, 0.9);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .btn-nexus {
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
-
+        .glass:hover {
+            border: 1px solid #8b5cf6;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+        }
+        /* O fundo que pediste está aqui */
+        .bg-gradient-hero { background: radial-gradient(circle at 50% -20%, #312e81, #050505); }
+        
+        .btn-nexus {
+            background: linear-gradient(90deg, #6366f1, #a855f7);
+            transition: 0.3s;
+        }
         .btn-nexus:hover {
-            transform: scale(1.03);
-            filter: brightness(1.1);
-            box-shadow: 0 0 25px rgba(139, 92, 246, 0.4);
+            filter: brightness(1.2);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
         }
-
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            opacity: 0.5; /* Partículas mais suaves para não distrair */
-        }
-
+        #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
         .loader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: #020205; display: flex; justify-content: center; align-items: center; z-index: 9999;
+            background: #050505; display: flex; justify-content: center; align-items: center; z-index: 9999;
         }
-
-        h1, h2 {
-            letter-spacing: -0.02em;
-        }
-
-        .text-balance {
-            text-wrap: balance;
-        }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-gradient-hero">
 
     <div id="loader" class="loader">
-        <div class="text-3xl font-extrabold tracking-tighter italic animate-pulse">
-            NEXUS<span class="text-purple-500">BOTS</span>
-        </div>
+        <div class="text-3xl font-bold neon-text animate-pulse">NEXUS BOTS...</div>
     </div>
 
     <div id="particles-js"></div>
 
-    <nav class="fixed w-full z-50 px-8 py-5 flex justify-between items-center bg-[#020205]/80 backdrop-blur-lg border-b border-white/5">
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/10">
         <div class="text-2xl font-black tracking-tighter italic">NEXUS<span class="text-purple-500">BOTS</span></div>
-        <div class="hidden md:flex space-x-10 font-semibold text-sm uppercase tracking-widest text-gray-400">
-            <a href="#" class="hover:text-white transition">Home</a>
-            <a href="#servicos" class="hover:text-white transition">Serviços</a>
-            <a href="#contacto" class="hover:text-white transition">Suporte</a>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#" class="hover:text-purple-400 transition">Home</a>
+            <a href="#servicos" class="hover:text-purple-400 transition">Serviços</a>
+            <a href="#contacto" class="hover:text-purple-400 transition">Suporte</a>
         </div>
-        <a href="https://discord.gg/RZQS8zMM85" target="_blank" class="btn-nexus px-7 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
-            <i class="fab fa-discord text-lg"></i> ENTRAR NO DISCORD
+        <a href="https://discord.gg/RZQS8zMM85" target="_blank" class="btn-nexus px-6 py-2 rounded-full font-bold flex items-center gap-2">
+            <i class="fab fa-discord"></i> Entrar no Discord
         </a>
     </nav>
 
-    <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative">
-        <div class="max-w-4xl">
-            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] text-purple-400 border border-purple-500/30 rounded-full bg-purple-500/10" data-aos="fade-down">
-                DISCORD SOLUTIONS & WEB DEV
-            </span>
-            <h1 class="text-5xl md:text-8xl font-black mb-8 leading-[1.1]" data-aos="fade-up">
-                Performance para a sua <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-500">Presença Digital</span>
-            </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                Criamos automações inteligentes e interfaces modernas para elevar o nível da sua comunidade no Discord.
-            </p>
-            <div class="flex flex-col md:flex-row gap-6 justify-center" data-aos="fade-up" data-aos-delay="200">
-                <a href="#servicos" class="btn-nexus px-12 py-4 rounded-2xl font-bold text-lg shadow-xl">🚀 Explorar Serviços</a>
-                <a href="https://discord.gg/RZQS8zMM85" target="_blank" class="bg-white/5 hover:bg-white/10 border border-white/10 px-12 py-4 rounded-2xl font-bold text-lg backdrop-blur-md transition flex items-center justify-center gap-2">
-                    <i class="fab fa-discord"></i> Abrir Ticket
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicos" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4" data-aos="fade-down">O que <span class="text-purple-500">fazemos</span></h2>
-            <div class="h-1.5 w-20 bg-purple-600 mx-auto rounded-full"></div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="glass p-10 rounded-[2rem]" data-aos="fade-up">
-                <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-8">
-                    <i class="fas fa-robot text-3xl text-purple-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-4 text-white">Bots Custom</h3>
-                <p class="text-gray-400 text-sm leading-relaxed text-balance">Sistemas de economia, moderação avançada e integrações API exclusivas.</p>
-            </div>
-
-            <div class="glass p-10 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-8">
-                    <i class="fas fa-globe text-3xl text-blue-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-4 text-white">Web Design</h3>
-                <p class="text-gray-400 text-sm leading-relaxed text-balance">Landing pages e Dashboards ultra-rápidos e totalmente responsivos.</p>
-            </div>
-
-            <div class="glass p-10 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-8">
-                    <i class="fas fa-ticket-alt text-3xl text-purple-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-4 text-white">Tickets 2.0</h3>
-                <p class="text-gray-400 text-sm leading-relaxed text-balance">Atendimento automatizado com logs e métricas de desempenho.</p>
-            </div>
-
-            <div class="glass p-10 rounded-[2rem]" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-8">
-                    <i class="fas fa-shield-alt text-3xl text-blue-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-4 text-white">Segurança</h3>
-                <p class="text-gray-400 text-sm leading-relaxed text-balance">Proteção anti-raid avançada e verificação de membros inteligente.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="py-32 px-6">
-        <div class="max-w-4xl mx-auto glass p-12 md:p-20 rounded-[3rem] text-center relative overflow-hidden" data-aos="zoom-in">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-purple-600/10 blur-[100px] rounded-full"></div>
-            <h2 class="text-4xl md:text-5xl font-black mb-6 italic uppercase tracking-tighter">PRONTO PARA <span class="text-purple-500">EVOLUIR?</span></h2>
-            <p class="text-gray-300 text-lg mb-12 max-w-xl mx-auto font-medium">
-                Junte-se à Nexus Bots. O nosso suporte especializado está disponível 24/7 via Discord para transformar o seu projeto.
-            </p>
-            <a href="https://discord.gg/RZQS8zMM85" target="_blank" class="btn-nexus inline-flex items-center gap-4 px-12 py-5 rounded-2xl font-black text-xl tracking-tight transition-all">
-                <i class="fab fa-discord text-2xl"></i> SOLICITAR ORÇAMENTO
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight uppercase" data-aos="fade-up">
+            Desenvolvimento de Bots e <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Websites Profissionais</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-10" data-aos="fade-up" data-aos-delay="200">
+            Automatiza o teu servidor Discord e cria a tua presença online com a Nexus Bots.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="#servicos" class="btn-nexus px-10 py-4 rounded-xl font-bold text-lg transition-transform hover:scale-105">🚀 Ver Serviços</a>
+            <a href="https://discord.gg/RZQS8zMM85" target="_blank" class="bg-white/10 hover:bg-white/20 px-10 py-4 rounded-xl font-bold text-lg backdrop-blur-md transition flex items-center gap-2">
+                <i class="fab fa-discord"></i> Abrir Ticket
             </a>
         </div>
     </section>
 
-    <footer class="py-16 border-t border-white/5 text-center">
-        <div class="text-xl font-black italic mb-4">NEXUS<span class="text-purple-500">BOTS</span></div>
-        <p class="text-gray-500 text-sm tracking-widest">&copy; 2026 NEXUS BOTS SOLUTIONS. TODOS OS DIREITOS RESERVADOS.</p>
+    <section id="servicos" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-down">Nossos <span class="text-purple-500">Serviços</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="glass p-8 rounded-3xl text-center" data-aos="zoom-in">
+                <i class="fas fa-robot text-5xl text-purple-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Bots Personalizados</h3>
+                <p class="text-gray-400">Sistemas de economia, moderação e integrações exclusivas.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl text-center" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-globe text-5xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Criação de Websites</h3>
+                <p class="text-gray-400">Landing pages e Dashboards modernos e responsivos.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl text-center" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-ticket-alt text-5xl text-purple-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Tickets Automáticos</h3>
+                <p class="text-gray-400">Suporte eficiente para atender os teus clientes via Discord.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl text-center" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-lock text-5xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Segurança & Automação</h3>
+                <p class="text-gray-400">Proteção anti-raid e automação de processos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 px-6 max-w-3xl mx-auto">
+        <div class="glass p-10 rounded-3xl text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4">PRECISAS DE SUPORTE?</h2>
+            <p class="text-gray-400 mb-8">Clica no botão abaixo para entrares no nosso servidor e abrires um ticket de atendimento direto com a nossa equipa.</p>
+            <a href="https://discord.gg/RZQS8zMM85" target="_blank" class="btn-nexus inline-flex items-center gap-3 px-10 py-4 rounded-xl font-bold text-lg uppercase transition-all hover:scale-105">
+                <i class="fab fa-discord"></i> Ir para o Discord
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-white/10 text-center text-gray-500">
+        <p class="mb-2 italic font-bold text-white uppercase">Nexus Bots</p>
+        <p>&copy; 2026 - Todos os direitos reservados</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true, offset: 100 });
+        AOS.init({ duration: 800, once: true });
 
         window.onload = () => {
             setTimeout(() => {
@@ -193,16 +137,10 @@
 
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "number": { "value": 80 },
                 "color": { "value": "#8b5cf6" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.3, "random": true },
-                "size": { "value": 3, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#6366f1", "opacity": 0.2, "width": 1 },
-                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
-            },
-            "interactivity": {
-                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } }
+                "line_linked": { "enable": true, "color": "#6366f1", "opacity": 0.2 },
+                "move": { "enable": true, "speed": 2 }
             }
         });
     </script>
