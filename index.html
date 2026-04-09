@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS BOTS | Soluções Digitais Futuristas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 
+    <style>
+        :root {
+            --neon-purple: #9d4edd;
+            --neon-blue: #00d4ff;
+            --dark-bg: #0a0a0c;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .nav-brand {
+            font-family: 'Rajdhani', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Efeito de Fundo Animado (Glow) */
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(157, 78, 221, 0.15) 0%, rgba(10, 10, 12, 1) 70%);
+            z-index: -1;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: var(--neon-purple);
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #9d4edd, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Navbar fixa */
+        nav {
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0c; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--neon-purple); }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center">
+        <div class="nav-brand text-2xl font-bold tracking-tighter">
+            <span class="text-white">NEXUS</span><span class="text-gradient">BOTS</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest">
+            <a href="#home" class="hover:text-purple-400 transition">Home</a>
+            <a href="#servicos" class="hover:text-purple-400 transition">Serviços</a>
+            <a href="#portfolio" class="hover:text-purple-400 transition">Portfólio</a>
+            <a href="#sobre" class="hover:text-purple-400 transition">Sobre</a>
+        </div>
+        <a href="https://discord.gg/RZQS8zMM85" target="_blank" class="btn-primary px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+            <i data-lucide="message-square" class="w-4 h-4"></i> DISCORD
+        </a>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <span class="text-blue-400 font-semibold tracking-[0.3em] text-xs mb-4 block">BEM-VINDO AO FUTURO</span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                DESENVOLVIMENTO DE BOTS E<br>
+                <span class="text-gradient">WEBSITES PROFISSIONAIS</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-10">
+                Automatiza o teu servidor Discord e cria a tua presença online com a Nexus Bots. Soluções de alta performance para a nova era digital.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#servicos" class="btn-primary px-8 py-4 rounded-lg font-bold text-lg">🚀 Ver Serviços</a>
+                <a href="https://discord.gg/RZQS8zMM85" target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/10 px-8 py-4 rounded-lg font-bold text-lg transition">💬 Entrar no Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-16 text-center" data-aos="fade-right">Nossos <span class="text-gradient">Serviços</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="glass-card p-8 rounded-2xl" data-aos="zoom-in" data-aos-delay="100">
+                <i data-lucide="bot" class="w-12 h-12 text-purple-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Bots Discord</h3>
+                <p class="text-gray-400 text-sm">Bots personalizados com comandos únicos e integrações avançadas.</p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl" data-aos="zoom-in" data-aos-delay="200">
+                <i data-lucide="layout" class="w-12 h-12 text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Websites</h3>
+                <p class="text-gray-400 text-sm">Landing pages e plataformas modernas com design responsivo.</p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl" data-aos="zoom-in" data-aos-delay="300">
+                <i data-lucide="ticket" class="w-12 h-12 text-purple-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Tickets</h3>
+                <p class="text-gray-400 text-sm">Sistemas automáticos de suporte para otimizar o atendimento.</p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl" data-aos="zoom-in" data-aos-delay="400">
+                <i data-lucide="shield-check" class="w-12 h-12 text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-3">Segurança</h3>
+                <p class="text-gray-400 text-sm">Proteção contra ataques e automações de moderação inteligentes.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-black/30 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-16" data-aos="fade-up">Projetos em <span class="text-gradient">Destaque</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-xl" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=800" alt="Projeto" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-6 text-left">
+                        <h4 class="font-bold text-xl">Nexus Dashboard</h4>
+                        <p class="text-gray-300 text-sm">Painel de controlo Web para bots.</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=800" alt="Projeto" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-6 text-left">
+                        <h4 class="font-bold text-xl">Bot de Economia</h4>
+                        <p class="text-gray-300 text-sm">Sistema financeiro completo para Discord.</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800" alt="Projeto" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-6 text-left">
+                        <h4 class="font-bold text-xl">Portal Gaming</h4>
+                        <p class="text-gray-300 text-sm">Website para comunidades competitivas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <div class="glass-card p-12 rounded-3xl border-purple-500/20" data-aos="zoom-out">
+            <h2 class="text-3xl font-bold mb-6 italic">SOBRE A <span class="text-gradient">NEXUS</span></h2>
+            <p class="text-gray-300 leading-relaxed text-lg">
+                Na Nexus Bots, criamos soluções digitais modernas para melhorar servidores Discord e negócios online. Focamo-nos na eficiência, estética e inovação tecnológica para levar a tua comunidade ao próximo nível.
+            </p>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 px-6 text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-4">QUERES TRABALHAR CONNOSCO?</h2>
+            <p class="text-gray-400 mb-10">Estamos prontos para transformar a tua ideia em realidade.</p>
+            <a href="https://discord.gg/RZQS8zMM85" target="_blank" class="btn-primary inline-flex items-center gap-3 px-10 py-5 rounded-full font-bold text-xl">
+                <i data-lucide="message-square" class="w-6 h-6"></i> JUNTA-TE AO NOSSO DISCORD
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-white/5 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 NEXUS BOTS. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar Animações
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Inicializar Ícones
+        lucide.createIcons();
+
+        // Smooth Scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
